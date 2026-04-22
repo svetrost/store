@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.scanner-viewport {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #0f172a;
+}
+
+.scanner-viewport video,
+.scanner-viewport canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.scanner-viewport canvas.drawingBuffer {
+  opacity: 0.35;
+}
+
+.scanner-overlay-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
