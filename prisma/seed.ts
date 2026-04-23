@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { hash } from "bcryptjs";
 import { PrismaClient } from "@prisma/client";
 
@@ -39,8 +40,6 @@ async function main() {
       name,
       username,
       role: "ADMIN",
-      // Если у тебя поле называется password, а не passwordHash,
-      // замени строку ниже на: password: passwordHash,
       passwordHash,
     },
     select: {
