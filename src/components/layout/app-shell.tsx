@@ -250,7 +250,7 @@ export function AppShell({ user, children }: AppShellProps) {
                   {roleMeta.label}
                 </div>
 
-                <div className="hidden md:block">
+                <div className="block">
                   <LogoutButton />
                 </div>
               </div>
